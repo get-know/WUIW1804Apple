@@ -1,0 +1,466 @@
+@charset "utf-8";
+@import url("base.css");
+
+header{
+	width: 100%;
+	background-color: #444;
+}
+/*这里不设置宽度,宽度由media查询后单独设置*/
+header .con{
+	height: 40px;
+	margin:0 auto;
+	text-align: right;
+	color:#aaa;
+	font-size: 12px;
+	line-height: 40px;
+}
+/*nav start*/
+ nav{
+	height: 44px;
+	line-height: 44px;
+	background-color: #333;
+	
+}
+ nav ul{
+ 	height: 44px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	color:#fff;
+	font-size: 12px;
+	box-sizing:border-box;
+}
+ nav ul li{
+ 	transition:color .4s;
+ 	cursor: pointer;
+ }
+nav ul li:hover{
+	color:#aaa;
+}
+nav.min ul li.menu{
+	padding-top:12px;
+	
+}
+nav.min ul li.menu:hover > span{
+	background-color: #aaa;
+}
+nav.min ul li > span{
+	display: block;
+	width: 18px;
+	height: 1px;
+	margin-top: 7px;
+	background-color: #ccc;
+	transition:.4s;
+}
+/*nav end*/
+
+/*phone-list start*/
+.phone-list{
+	width: 100%;
+}
+
+.phone-list ul li{
+	width: 100%;
+	margin-bottom: 12px;
+	color:#111;
+	text-align: center;	
+	background-color: #fafafa;
+}
+.phone-list ul li a{
+	display: block;
+	overflow: hidden;
+}
+.phone-list ul li h1{
+	font-weight: bold;	
+}
+.phone-list ul li .imgbox{
+	margin:0 auto;
+}
+/*phone-list end*/
+
+/*list start*/
+.list,.list ul {
+	width: 100%;
+	display:flex;
+	flex-wrap:wrap;
+}
+.list ul li{
+	margin-bottom: 12px;
+	box-sizing:border-box;
+	color:#111;
+	background-color: #fafafa;
+	text-align: center;
+}
+.list ul li h1{
+	font-weight: bold;	
+}
+.list ul li .imgbox{
+	margin:0 auto;
+}
+/*list end*/
+
+
+/*footer start*/
+footer{
+	width: 100%;
+	background-color: #f2f2f2;
+}
+footer .f-con{	
+	margin:0 auto;
+}
+footer .f-con .f-list{
+	display:flex;
+	margin:0 auto;
+}
+footer .f-con .f-list ul li + li{
+	cursor:pointer;
+}
+footer .f-con .f-list ul li + li span:hover{
+	text-decoration:underline;
+}
+footer ul{
+	width: 20%;
+	text-align: left;
+	font-size: 12px;
+	color:#646464;
+	line-height: 24px;
+}
+footer ul li:first-child{
+	color:#333;
+	font-weight: bold;
+} 
+footer .f-link{
+	margin:0 auto;
+	color:#8a888a;
+	font-size: 12px;
+	padding:0 15px 20px;
+}
+footer .f-link .copyright{
+	display: flex;
+	justify-content: space-between;
+}
+footer .f-link .copy-bg{
+	display: flex;
+	align-items:center;
+	height: 30px;
+	margin-bottom: 15px;
+}
+footer .f-link .copy-bg i{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+		margin-right: 5px;
+		background: url('../img/16.png')no-repeat center/cover;
+}
+
+footer .f-small{
+	width: 100%;
+}
+footer .f-small ul{
+	width: 100%;
+	padding:0 15px;
+	box-sizing:border-box;
+}
+footer .f-small ul li{
+	position: relative;
+	height: 36px;
+	border-bottom:1px solid #e1e1e1;
+	line-height: 36px;
+	overflow: hidden;
+	font-weight: bold;
+}
+footer .f-small ul li > i{
+	float: right;
+	transition: .2s;	
+}
+footer .f-small ul li > i.on{
+	transform: rotate(44deg);
+}
+footer .f-small ul li .li-child{
+	position: relative;
+	left: 15px;
+	top: 0;
+	width: 100%;
+	
+}
+footer .f-small ul li .li-child > a:hover{
+	text-decoration:underline;
+}
+footer .f-small ul li.on{
+	height:auto;
+}
+footer .f-small ul li .li-child >a{
+	display: block;
+}
+footer .f-small ul li i{
+	font-size: 10px;
+	color:#757575;
+}
+footer .f-con .copyright i{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		margin-right: 5px;
+		vertical-align: middle;
+		background: url('../img/16.png')no-repeat center/cover;
+}
+
+/*footer end*/
+
+
+
+
+
+
+
+
+/*第一屏  开始*/
+/*大于1024的时候,宽度为976*/
+@media screen and (min-width:1024px){
+	header .con{
+		width:976px;
+	}	
+	nav ul{
+		width: 976px;
+		
+	}
+	
+	.min{
+		display: none;
+	}
+	.phone-list ul li h1{
+		margin-top: 88px;
+		font-size: 42px;
+		line-height: 61px;	
+	}
+	.phone-list ul li h2{
+		font-size: 22px;
+		line-height: 61px;
+	}
+	.phone-list ul li{
+		overflow: hidden;
+	}
+	.phone-list ul li .imgbox{
+		width: 909px;
+		height: 194px;
+		margin-top: 82px;
+		margin-bottom: 108px;
+		background: url('../img/iphone_x_large.jpg') no-repeat center/cover;
+	}
+	.list ul li{
+		width: 50%;
+		height: 580px;
+		border-left:10px solid #fff;
+		border-right:10px solid #fff;
+		overflow: hidden;
+	}
+	.list ul li:nth-child(2n){
+		border-left:none;
+	}
+	.list ul li h1{
+		margin-top: 48px;
+		font-size: 30px;
+		line-height: 46px;		
+	}
+	.list ul li h2{
+		font-size: 18px;
+		line-height: 34px;
+	}
+	.list ul li .imgbox{
+		width: 500px;
+		height: 430px;
+		margin-top: 23px;
+		background: url('../img/macbook_pro_large.jpg') no-repeat center/cover;
+	}
+	/*footer s*/
+	footer .f-list{
+	display:flex;
+	width: 976px;
+	padding:40px 15px;
+	}
+	footer ul{
+		width: 20%;
+		text-align: left;
+		font-size: 12px;
+		color:#646464;
+		line-height: 24px;
+	}
+	footer ul li:first-child{
+		color:#333;
+		font-weight: bold;
+	}
+	footer .f-link {
+		width: 976px;
+		
+	}
+	footer .f-link .more{
+		padding-bottom:8px;
+		border-bottom: 1px solid #ccc;
+	}
+	footer .f-link .copyright{
+		margin:14px 0 ;
+	}
+	footer .f-small{
+		display: none;
+	}
+	/*footer e*/
+		
+}
+/*第一屏  结束*/
+
+
+/*第二屏  开始*/
+/*小于1024时宽度不设置*/
+@media screen and (max-width:1024px){
+	header .con{
+		padding-right:20px;
+	}
+	nav ul{
+		padding:0 22px;
+	}
+	
+	.min{
+		display: none;
+	}
+	
+	.phone-list ul li h1{
+		margin-top: 102px;
+		font-size: 32px;
+		line-height: 48px;	
+	}
+	.phone-list ul li h2{
+		font-size: 20px;
+		line-height: 35px;
+	}
+	.phone-list ul li .imgbox{
+		width: 704px;
+		height: 148px;
+		margin-top: 90px;
+		margin-bottom: 141px;
+		background: url('../img/iphone_x_medium.jpg') no-repeat center/cover;
+	}
+	
+	.list ul li{
+		width: 50%;
+		height: 490px;
+		border-left:10px solid #fff;
+		border-right:10px solid #fff;
+	}
+	.list ul li:nth-child(2n){
+		border-left:none;
+	}
+	.list ul li h1{
+		margin-top: 40px;
+		font-size: 24px;
+		line-height: 36px;		
+	}
+	.list ul li h2{
+		font-size: 16px;
+		line-height: 28px;
+	}
+	.list ul li .imgbox{
+		width: 350px;
+		height: 380px;
+		margin-top: 5px;
+		background: url('../img/macbook_pro_medium.jpg') no-repeat center/cover;
+	}
+	/*footer s*/
+	footer .f-list{
+		padding:20px 15px;
+	}
+	footer ul{
+		width: 20%;
+		text-align: left;
+		font-size: 12px;
+		color:#646464;
+		line-height: 24px;
+	}
+	footer ul li:first-child{
+		color:#333;
+		font-weight: bold;
+	}
+	footer .f-link {
+		padding:0 15px 20px;
+	}
+	footer .f-link .more{
+		padding-bottom:8px;
+		border-bottom: 1px solid #ccc;
+	}
+	footer .f-link .copyright{
+		margin:14px 0 ;
+	}
+	footer .f-small{
+		display: none;
+	}
+	/*footer e*/
+	
+}
+/*第二屏  结束*/
+
+
+/*第三屏  开始*/
+@media screen and (max-width:768px){
+	.max{
+		display: none;
+	}	
+	.min{
+		display: block;
+	}
+	.phone-list ul li h1{
+		margin-top: 42px;
+		font-size: 24px;
+		line-height: 34px;	
+	}
+	.phone-list ul li h2{
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.phone-list ul li .imgbox{
+		width: 170px;
+		height: 334px;
+		margin-top: 25px;
+		margin-bottom: 38px;
+		background: url('../img/iphone_x_small.jpg') no-repeat center/cover;
+	}
+	.list ul li{
+		width: 100%;
+		height: 500px;
+		border:none;
+	}
+	.list ul li h1{
+		margin-top: 35px;
+		font-size: 24px;
+		line-height: 36px;		
+	}
+	.list ul li h2{
+		font-size: 16px;
+		line-height: 28px;
+	}
+	.list ul li .imgbox{
+		width: 320px;
+		height: 460px;
+		margin-top: -60px;
+		background: url('../img/macbook_pro_small.jpg') no-repeat center/cover;
+	}
+	/*footer start*/
+	footer .f-link {
+		padding:0 15px 20px;
+	}
+	footer .f-link .more{
+		padding-bottom:8px;
+		border:none;
+	}
+	footer .f-link .copyright{
+		margin:14px 0 ;
+	}
+	footer .f-middle{
+		display: none;
+	}
+	footer .f-small{
+		display: block;
+	}
+	/*footer end*/
+	
+}
+/*第三屏  结束*/
